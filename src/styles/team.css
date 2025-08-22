@@ -1,0 +1,10 @@
+.team{display:grid;grid-template-columns:.9fr 1.2fr;gap:28px;padding:var(--s6) 0}
+.team-text h3{font:600 22px Poppins;margin:0 0 10px}
+.team-text p{font-size:14px;line-height:1.6;margin:0 0 12px;color:var(--text)}
+.team-media img{width:100%;height:340px;object-fit:cover;border-radius:8px}
+.link{color:var(--mauve-dark);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;display:inline-block}
+.link:hover{opacity:0.8}
+
+@media (max-width: 1024px) {
+  .team{grid-template-columns:1fr;gap:16px}
+}

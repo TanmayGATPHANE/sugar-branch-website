@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #f97316;
+    --color-primary-dark: #ea580c;
+    --color-secondary: #64748b;
+    --color-dark: #0f172a;
+    --color-light: #f8fafc;
+    --color-accent: #10b981;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+  }
+}
+
+@layer components {
+  .heading-1 { 
+    @apply text-5xl md:text-6xl font-bold leading-tight font-display; 
+  }
+  .heading-2 { 
+    @apply text-4xl md:text-5xl font-bold leading-tight font-display; 
+  }
+  .heading-3 { 
+    @apply text-3xl md:text-4xl font-semibold leading-tight font-display; 
+  }
+  .heading-4 { 
+    @apply text-2xl md:text-3xl font-semibold font-display; 
+  }
+  .body-large { 
+    @apply text-lg md:text-xl leading-relaxed; 
+  }
+  .body-normal { 
+    @apply text-base leading-relaxed; 
+  }
+  .body-small { 
+    @apply text-sm leading-normal; 
+  }
+
+  .container {
+    @apply w-full max-w-7xl mx-auto px-4;
+  }
+
+  @screen sm {
+    .container { 
+      @apply px-6; 
+    }
+  }
+
+  @screen md {
+    .container { 
+      @apply px-8; 
+    }
+  }
+
+  @screen lg {
+    .container { 
+      @apply px-12; 
+    }
+  }
+
+  @screen xl {
+    .container { 
+      @apply px-16; 
+    }
+  }
+
+  .grid-responsive {
+    @apply grid grid-cols-1;
+  }
+
+  @screen md {
+    .grid-responsive { 
+      @apply grid-cols-2; 
+    }
+  }
+
+  @screen lg {
+    .grid-responsive { 
+      @apply grid-cols-3; 
+    }
+  }
+
+  @screen xl {
+    .grid-responsive { 
+      @apply grid-cols-4; 
+    }
+  }
+
+  .nav-link {
+    @apply text-gray-700 hover:text-primary-500 transition-colors duration-300 font-medium;
+  }
+
+  .input {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all;
+  }
+
+  .input.error {
+    @apply border-red-500 focus:ring-red-500 focus:border-red-500;
+  }
+
+  .btn {
+    @apply px-6 py-3 rounded-lg font-semibold transition-all duration-300 inline-flex items-center justify-center;
+  }
+
+  .btn-primary {
+    @apply bg-primary-500 text-white hover:bg-primary-600 hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-800 hover:bg-gray-300;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white;
+  }
+
+  .dropdown-menu {
+    @apply absolute top-full left-0 bg-white shadow-lg rounded-lg py-2 min-w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50;
+  }
+
+  .dropdown-menu a {
+    @apply block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors;
+  }
+
+  .hamburger {
+    @apply flex flex-col space-y-1 cursor-pointer;
+  }
+
+  .hamburger span {
+    @apply w-6 h-0.5 bg-current transition-transform;
+  }
+
+  .hamburger.active span:first-child {
+    @apply rotate-45 translate-y-1.5;
+  }
+
+  .hamburger.active span:nth-child(2) {
+    @apply opacity-0;
+  }
+
+  .hamburger.active span:last-child {
+    @apply -rotate-45 -translate-y-1.5;
+  }
+
+  .mobile-menu {
+    @apply fixed inset-0 bg-white z-50 p-6 transform translate-x-full transition-transform;
+  }
+
+  .mobile-menu.open {
+    @apply translate-x-0;
+  }
+
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px] flex items-center justify-center;
+  }
+
+  .safe-area-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+@layer utilities {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}

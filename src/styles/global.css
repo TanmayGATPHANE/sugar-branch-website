@@ -1,0 +1,65 @@
+:root{
+  --bg-ivory:#f5efe7;
+  --bg-sand:#e5d6c8;
+  --mauve:#7a5a6a;
+  --mauve-dark:#5d4350;
+  --mauve-grad:linear-gradient(180deg,#896a7a 0%, #6f5462 100%);
+  --text:#2c2326;
+  --muted:#85777b;
+  --white:#fff;
+
+  --container:1200px;
+  --radius:16px;
+  --s1:8px; --s2:12px; --s3:16px; --s4:24px; --s5:32px; --s6:48px; --s7:64px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden}
+html,body,#root{height:100%}
+body{margin:0;background:var(--bg-ivory);color:var(--text);font:16px/1.7 Inter, system-ui, sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:Poppins, Inter, system-ui, sans-serif;letter-spacing:.2px;color:var(--text)}
+.container{max-width:var(--container);margin:0 auto;padding:0 var(--s4)}
+
+/* Smooth transitions for all elements */
+*{transition:transform 0.3s ease, opacity 0.3s ease}
+
+/* Improved scroll animations */
+@media (prefers-reduced-motion: no-preference) {
+  html{scroll-behavior:smooth}
+  *{transition:transform 0.3s ease, opacity 0.3s ease}
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *{transition:none !important;animation-duration:0.01ms !important;animation-iteration-count:1 !important}
+}
+
+/* Loading animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Enhanced focus states for better accessibility */
+a:focus, button:focus {
+  outline: 2px solid var(--mauve);
+  outline-offset: 2px;
+}

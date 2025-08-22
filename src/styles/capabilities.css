@@ -1,0 +1,19 @@
+.cap{padding:var(--s6) 0}
+.cap h2{font:700 28px Poppins;margin:0 0 var(--s4);text-align:center}
+.cap-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}
+.cap-card{background:#eee;border-radius:10px;padding:16px;min-height:220px;display:flex;flex-direction:column}
+.cap-card.primary{background:#ccb0bf;color:#fff}
+.cap-card h4{font:600 16px Poppins;margin:0 0 6px}
+.cap-card p{font-size:14px;color:#2f2a2c;line-height:1.4;margin:0 0 auto;flex:1}
+.cap-card.primary p{color:#fff;opacity:.95}
+.cap-link{color:var(--mauve-dark);text-decoration:none;border-bottom:1px solid currentColor;font-size:14px;padding-bottom:2px;display:inline-block;margin-top:8px}
+.cap-card.primary .cap-link{color:#fff;border-color:#fff}
+.cap-link:hover{opacity:0.8}
+
+@media (max-width: 1024px) {
+  .cap-grid{grid-template-columns:repeat(2,1fr);gap:16px}
+}
+
+@media (max-width: 640px) {
+  .cap-grid{grid-template-columns:1fr}
+}
