@@ -1,30 +1,27 @@
-// AOS-style animation variants to match the original website exactly
+// Pure fade-in animations to match WOW.js behavior from original website
 export const fadeUp = {
   hidden: { 
-    opacity: 0, 
-    y: 30 
+    opacity: 0
+    // NO movement - original uses pure fade only
   },
   visible: { 
-    opacity: 1, 
-    y: 0,
+    opacity: 1,
     transition: { 
-      duration: 0.8, 
-      ease: "easeOut" as const
+      duration: 1.2,  // WOW.js default duration
+      ease: "easeOut" as const // Framer Motion built-in easing
     }
   }
 };
 
 export const fadeUpDelay = {
   hidden: { 
-    opacity: 0, 
-    y: 30 
+    opacity: 0
   },
   visible: { 
-    opacity: 1, 
-    y: 0,
+    opacity: 1,
     transition: { 
-      duration: 0.8, 
-      delay: 0.2,
+      duration: 1.2, 
+      delay: 0.2,  // WOW.js style delay
       ease: "easeOut" as const
     }
   }
@@ -32,14 +29,13 @@ export const fadeUpDelay = {
 
 export const fadeLeft = {
   hidden: { 
-    opacity: 0, 
-    x: -30 
+    opacity: 0
+    // NO horizontal movement - pure fade only
   },
   visible: { 
-    opacity: 1, 
-    x: 0,
+    opacity: 1,
     transition: { 
-      duration: 0.8, 
+      duration: 1.2, 
       ease: "easeOut" as const
     }
   }
@@ -47,14 +43,13 @@ export const fadeLeft = {
 
 export const fadeRight = {
   hidden: { 
-    opacity: 0, 
-    x: 30 
+    opacity: 0
+    // NO horizontal movement - pure fade only
   },
   visible: { 
-    opacity: 1, 
-    x: 0,
+    opacity: 1,
     transition: { 
-      duration: 0.8, 
+      duration: 1.2, 
       ease: "easeOut" as const
     }
   }
@@ -67,34 +62,33 @@ export const fadeIn = {
   visible: { 
     opacity: 1,
     transition: { 
-      duration: 1.0, 
+      duration: 1.2, 
       ease: "easeOut" as const
     }
   }
 };
 
-// Container for staggered children (AOS-style)
+// Container for staggered children - WOW.js style
 export const staggerParent = {
   hidden: { opacity: 1 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2
+      staggerChildren: 0.1,  // WOW.js style stagger
+      delayChildren: 0.1
     }
   }
 };
 
 export const staggerChild = {
   hidden: { 
-    opacity: 0, 
-    y: 20 
+    opacity: 0
+    // NO movement - pure fade only like WOW.js
   },
   visible: {
     opacity: 1,
-    y: 0,
     transition: { 
-      duration: 0.6,
+      duration: 1.2,
       ease: "easeOut" as const
     }
   }

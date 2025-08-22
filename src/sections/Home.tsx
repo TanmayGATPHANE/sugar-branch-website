@@ -6,6 +6,7 @@ import Capabilities from "../components/Capabilities";
 import Clients from "../components/Clients";
 import Testimonials from "../components/Testimonials";
 import Footer from "../components/Footer";
+import ImageSlider from "../components/ui/ImageSlider";
 
 export default function Home(){
   return (

@@ -1,8 +1,47 @@
-.clients{display:grid;grid-template-columns:.8fr 1.2fr;gap:18px;padding:var(--s6) 0}
-.clients-left h3{font:600 24px Poppins;margin:0}
-.clients-logos{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;align-content:start}
-.logo{border:1px solid #e7e1dc;background:#fff;border-radius:8px;height:64px;display:flex;align-items:center;justify-content:center}
-.logo img{max-height:36px;max-width:80%;object-fit:contain}
+/* Match the original website's clients section styling exactly */
+.clients {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px 0;
+  background: #fcf9ea;
+  box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.3);
+}
+
+.clients .container {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 18px;
+}
+
+.clients-left h3 {
+  font: 600 24px Poppins;
+  margin: 0;
+  color: #333;
+}
+
+.clients-logos {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+  align-content: start;
+}
+
+.logo {
+  border: 1px solid #e7e1dc;
+  background: #fff;
+  border-radius: 8px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  max-height: 36px;
+  max-width: 80%;
+  object-fit: contain;
+}
 
 @media (max-width: 1024px) {
   .clients{grid-template-columns:1fr;gap:24px}

@@ -1,14 +1,71 @@
-.cap{padding:var(--s6) 0}
-.cap h2{font:700 28px Poppins;margin:0 0 var(--s4);text-align:center}
-.cap-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}
-.cap-card{background:#eee;border-radius:10px;padding:16px;min-height:220px;display:flex;flex-direction:column}
-.cap-card.primary{background:#ccb0bf;color:#fff}
-.cap-card h4{font:600 16px Poppins;margin:0 0 6px}
-.cap-card p{font-size:14px;color:#2f2a2c;line-height:1.4;margin:0 0 auto;flex:1}
-.cap-card.primary p{color:#fff;opacity:.95}
-.cap-link{color:var(--mauve-dark);text-decoration:none;border-bottom:1px solid currentColor;font-size:14px;padding-bottom:2px;display:inline-block;margin-top:8px}
-.cap-card.primary .cap-link{color:#fff;border-color:#fff}
-.cap-link:hover{opacity:0.8}
+/* Match the original website's icon-content-block styling exactly */
+.cap {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  color: #ffffff;
+  background: #b79081;
+  background-image: url(../images/bg-img.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 60px 0;
+}
+
+.cap h2 {
+  color: #816575;
+  line-height: 90px;
+  font: 700 28px Poppins;
+  margin: 0 0 var(--s4);
+  text-align: center;
+  width: 100%;
+}
+
+.cap-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+}
+
+.cap-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 16px;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+
+.cap-card h4 {
+  font: 600 16px Poppins;
+  margin: 0 0 6px;
+  color: #ffffff;
+}
+
+.cap-card p {
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 1.4;
+  margin: 0 0 auto;
+  flex: 1;
+  opacity: 0.95;
+}
+
+.cap-link {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid #ffffff;
+  font-size: 14px;
+  padding-bottom: 2px;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.cap-link:hover {
+  opacity: 0.8;
+}
 
 @media (max-width: 1024px) {
   .cap-grid{grid-template-columns:repeat(2,1fr);gap:16px}

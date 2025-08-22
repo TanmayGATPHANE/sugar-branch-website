@@ -1,7 +1,63 @@
-.testi{padding:var(--s6) 0}
-blockquote{margin:0;background:#fff;border-radius:12px;padding:24px;color:#2c2326;box-shadow:0 1px 0 rgba(0,0,0,.03)}
-blockquote p{margin:0 0 12px;font-size:16px;line-height:1.6}
-blockquote footer{display:flex;gap:8px;align-items:center;color:#6d5e63;font-size:14px}
-blockquote strong{color:#2c2326}
-.trust-band{background:var(--mauve-grad);color:#fff;padding:60px 0;margin-top:var(--s6)}
-.trust-band h3{font:700 28px Poppins;margin:0}
+/* Match the original website's testimonials section styling exactly */
+.testimonials {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 150px;
+  color: #fff;
+  background: #866476;
+  position: relative;
+  padding: 60px 0;
+}
+
+.testimonials .container {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.testi {
+  padding: 0;
+}
+
+blockquote {
+  margin: 0;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+blockquote p {
+  margin: 0 0 12px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+blockquote footer {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+blockquote strong {
+  color: #ffffff;
+}
+
+.trust-band {
+  background: transparent;
+  color: #fff;
+  padding: 0;
+  margin-top: 0;
+}
+
+.trust-band h3 {
+  font: 700 28px Poppins;
+  margin: 0;
+  color: #ffffff;
+}

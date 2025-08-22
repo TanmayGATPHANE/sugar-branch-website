@@ -1,8 +1,8 @@
 import { useAnimation } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 
-// Hook to mimic AOS (Animate On Scroll) behavior exactly
-export const useScrollAnimation = (threshold = 0.1, triggerOnce = true, offset = 120) => {
+// Hook to mimic AOS (Animate On Scroll) behavior exactly like the original website
+export const useScrollAnimation = (threshold = 0.1, triggerOnce = true, offset = 80) => {
   const controls = useAnimation();
   const ref = useRef<HTMLDivElement>(null);
   const [inView, setInView] = useState(false);
@@ -14,7 +14,8 @@ export const useScrollAnimation = (threshold = 0.1, triggerOnce = true, offset =
         const targetTop = targetRect.top;
         const windowHeight = window.innerHeight;
         
-        // AOS-like trigger: element is considered "in view" when it's within offset from bottom
+        // More aggressive trigger - animate when element is 80px from bottom of viewport
+        // This matches the original website's behavior
         const shouldTrigger = targetTop <= windowHeight - offset;
         
         if (shouldTrigger && !inView) {

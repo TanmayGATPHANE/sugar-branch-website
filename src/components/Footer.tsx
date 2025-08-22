@@ -21,56 +21,51 @@ export default function Footer(){
           className="f-about"
           variants={staggerChild}
         >
-          <img 
-            className="mark" 
-            src="https://via.placeholder.com/56x56/866476/ffffff?text=SB" 
-            alt="Sugar Branch"
-          />
-          <p>At Sugar Branch, we take pride in partnering with brands globally in the development of creative marketing strategies through our diverse capabilities. We believe in the power that elevates brands through outstanding creativity and through quality delivery that ensures optimal brand growth and recognition.</p>
+          <h6>About Us</h6>
+          <p>At Sugar Branch, we take pride in partnering the brand's growth by creating compelling campaigns through borderless creativity, innovating at the intersection of Design & Consulting, Advertising, Creating Experiential Spaces and much more...</p>
+          <p><a href="Contact-Us.html" className="link">Get in touch</a></p>
+          <ul style={{display: 'flex', gap: '8px', listStyle: 'none', padding: 0}}>
+            <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i className="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i className="fab fa-linkedin-in"></i></a></li>
+            <li><a href="#"><i className="fab fa-google-plus-g"></i></a></li>
+            <li><a href="#"><i className="fab fa-youtube"></i></a></li>
+          </ul>
         </motion.div>
         <motion.nav 
           className="f-col"
           variants={staggerChild}
         >
-          <h5>About Us</h5>
-          <a href="#">Sugar Comms</a>
-          <a href="#">Sugar Xperience</a>
-          <a href="#">Sugar Content</a>
-          <a href="#">Sugar Digital</a>
-          <a href="#">Sugar Retail</a>
+          <h6>Important Links</h6>
+          <a href="Sugar-Comms.html">Sugar Comms</a>
+          <a href="Sugar-Xperience.html">Sugar Xperience</a>
+          <a href="Sugar-Content.html">Sugar Content</a>
+          <a href="Sugar-Retail.html">Sugar Retail</a>
+          <a href="Sugar-Digiverse.html">Sugar Digiverse</a>
         </motion.nav>
         <motion.nav 
           className="f-col"
           variants={staggerChild}
         >
-          <h5>Important Links</h5>
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Who We Are</a>
-          <a href="#">Our Work</a>
-          <a href="#">Contacts Us</a>
+          <h6>Useful Links</h6>
+          <a href="index.html">Home</a>
+          <a href="Who-We-Are.html">Who We Are</a>
+          <a href="Clients.html">Clients</a>
+          <a href="Our-Work.html">Our Work</a>
+          <a href="Contact-Us.html">Contact Us</a>
         </motion.nav>
         <motion.nav 
           className="f-col"
           variants={staggerChild}
         >
-          <h5>Useful Links</h5>
-          <a href="#">Home</a>
-          <a href="#">Who We Are</a>
-          <a href="#">Our Work</a>
-          <a href="#">Clients</a>
-          <a href="#">Contact Us</a>
-        </motion.nav>
-        <motion.nav 
-          className="f-col"
-          variants={staggerChild}
-        >
-          <h5>Stay Connected</h5>
-          <div className="mini-card">
-            <img 
-              src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
-              alt="Stay connected"
-            />
+          <h6>Stay Connected</h6>
+          <div className="fb-page" style={{width: '255px', height: '240px'}}>
+            <div className="mini-card">
+              <img 
+                src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                alt="Stay connected"
+              />
+            </div>
           </div>
         </motion.nav>
       </motion.div>
@@ -78,7 +73,7 @@ export default function Footer(){
         className="f-bottom"
         variants={fadeUp}
       >
-        © 2024 Sugar Branch | All Rights Reserved
+        <span className="copyright">© 2024 Sugar Branch | All Rights Reserved</span>
       </motion.div>
     </motion.footer>
   );

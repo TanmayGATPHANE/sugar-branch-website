@@ -4,6 +4,21 @@ import type { Swiper as SwiperType } from "swiper";
 import "swiper/swiper-bundle.css";
 import "./../styles/hero.css";
 
+// Import the local slider images
+import slide01 from "../assets/images/slide01.jpg";
+import slide02 from "../assets/images/slide02.jpg";
+import slide03 from "../assets/images/slide03.jpg";
+import slide04 from "../assets/images/slide04.jpg";
+import slide05 from "../assets/images/slide05.jpg";
+
+const slides = [
+  { image: slide01, alt: "Abstract geometric design 1" },
+  { image: slide02, alt: "Flowing abstract waves" },
+  { image: slide03, alt: "Dynamic fluid shapes" },
+  { image: slide04, alt: "Modern retail space" },
+  { image: slide05, alt: "Abstract geometric patterns" },
+];
+
 export default function Hero(){
   const swiperRef = useRef<HTMLDivElement>(null);
 
@@ -15,8 +30,8 @@ export default function Hero(){
       effect: "fade",
       autoplay: { delay: 4500, disableOnInteraction: false },
       on: {
-        init(swiper: SwiperType) {
-          const total = swiper.slides.length - 2;
+        init(_swiper: SwiperType) {
+          const total = slides.length;
           const currentEl = document.querySelector(".hero-count .current");
           const totalEl = document.querySelector(".hero-count .total");
           if (totalEl) totalEl.textContent = String(total).padStart(2,"0");
@@ -43,13 +58,15 @@ export default function Hero(){
     <div className="hero">
       <div className="swiper hero-swiper" ref={swiperRef}>
         <div className="swiper-wrapper">
-          <div className="swiper-slide"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Office collaboration" /></div>
-          <div className="swiper-slide"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Team meeting" /></div>
-          <div className="swiper-slide"><img src="https://images.unsplash.com/photo-1515378791036-0648a814c963?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Creative workspace" /></div>
+          {slides.map((slide, index) => (
+            <div key={index} className="swiper-slide">
+              <img src={slide.image} alt={slide.alt} />
+            </div>
+          ))}
         </div>
 
         <div className="hero-overlay">
-          <h1><span>Sugar Content</span><em>Captivate, Create, Elevate</em></h1>
+          <h1><span>Sugar Branch</span><em>All Things Creative</em></h1>
         </div>
 
         <div className="hero-controls">
