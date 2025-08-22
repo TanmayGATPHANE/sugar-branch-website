@@ -1,36 +1,35 @@
-import Hero from "../components/Hero";
-import Edge from "../components/Edge";
-import Story from "../components/Story";
-import Team from "../components/Team";
-import Capabilities from "../components/Capabilities";
-import Clients from "../components/Clients";
-import Testimonials from "../components/Testimonials";
+import HeroSlider from "../components/HeroSlider";
+import SugarEdge from "../components/SugarEdge";
+import OurStory from "../components/OurStory";
+import TeamSection from "../components/TeamSection";
+import CapabilitiesSection from "../components/CapabilitiesSection";
+import ClientsSection from "../components/ClientsSection";
+import TestimonialsSection from "../components/TestimonialsSection";
 import Footer from "../components/Footer";
-import ImageSlider from "../components/ui/ImageSlider";
 
 export default function Home(){
   return (
     <>
       <section id="hero">
-        <Hero />
+        <HeroSlider />
       </section>
       <section id="sugar-edge">
-        <Edge />
+        <SugarEdge />
       </section>
       <section id="story">
-        <Story />
+        <OurStory />
       </section>
       <section id="team">
-        <Team />
+        <TeamSection />
       </section>
       <section id="capabilities">
-        <Capabilities />
+        <CapabilitiesSection />
       </section>
       <section id="clients">
-        <Clients />
+        <ClientsSection />
       </section>
       <section id="testimonials">
-        <Testimonials />
+        <TestimonialsSection />
       </section>
       <Footer />
     </>

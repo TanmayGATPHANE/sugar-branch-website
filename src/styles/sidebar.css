@@ -11,7 +11,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--bg-ivory);
+  background: #222327;
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -25,8 +25,8 @@
 .loader-circle {
   width: 50px;
   height: 50px;
-  border: 3px solid var(--mauve);
-  border-top: 3px solid transparent;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid #fff;
   border-radius: 50%;
   animation: spin 1s linear infinite;
   margin: 0 auto 20px;
@@ -39,7 +39,7 @@
 
 /* LEFT SIDE - Exact from reference */
 .left-side {
-  width: 180px;
+  width: 140px;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -68,7 +68,7 @@
 .left-side .logo {
   display: inline-block;
   margin-bottom: auto;
-  padding-top: 20px;
+  padding-top: 0px;
 }
 
 .left-side .logo img {
@@ -81,7 +81,7 @@
 }
 
 .left-side .follow-us {
-  width: 180px;
+  width: 140px;
   color: #fff;
   text-align: center;
   transform: rotate(-90deg);
@@ -336,7 +336,7 @@
   transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
   -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
   background: #dac9bc;
-  padding-left: 180px;
+  padding-left: 140px;
 }
 
 .site-navigation .layer {
@@ -500,7 +500,7 @@
 .social-media .inner {
   position: relative;
   z-index: 2;
-  padding-left: 180px;
+  padding-left: 140px;
   -webkit-transition: 0.25s ease-in-out;
   -moz-transition: 0.25s ease-in-out;
   -ms-transition: 0.25s ease-in-out;
@@ -569,17 +569,18 @@
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .left-side {
-    width: 160px;
+    width: 120px;
     border-right: none;
   }
   
   .left-side .logo img {
-    width: 120px;
+    width: 100px;
   }
   
   .left-side .follow-us {
     font-size: 11px;
     margin-bottom: 30px;
+    width: 120px;
   }
   
   .page-loaded .left-side {
@@ -592,7 +593,7 @@
   
   .site-navigation {
     font-family: 'Barlow Condensed', sans-serif;
-    padding-left: 160px;
+    padding-left: 120px;
   }
   
   .social-media .inner ul li {
@@ -631,7 +632,7 @@
   }
   
   .left-side {
-    width: 160px;
+    width: 120px;
     border-right: none;
   }
   
